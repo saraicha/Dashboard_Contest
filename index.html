@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.:Dashboard-cookie shop:.</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h2><i class="fa-solid fa-cookie-bite"></i>The cookie shop</h2>
+        </div>
+        <nav class="navbar">
+            <a href="#">Dashboard</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="icon-user">
+            <a href="#">
+                <img src="./images/icon.jpg" width="50" height="50" alt="User icon">
+                <div class="user-sub-nav">
+                    <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                    <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                </div>
+            </a>
+        </div>
+    </header>
+    <aside class="vertical-navbar">
+        <a id="stats" href="#" onclick="openElement(this)"><i class="fa-solid fa-money-check"></i>
+            <div class="desc-nav-el">Statistics</div>
+        </a>
+        <a id="charts" href="#" onclick="openElement(this)">
+            <i class="fa-solid fa-chart-simple"></i>
+            <div class="desc-nav-el">Charts</div></a>
+        <a id="msg" href="#" onclick="openElement(this)"><i class="fa-regular fa-comment-dots"></i>
+            <div class="desc-nav-el">Latest Messages</div>
+        </a>
+    </aside>
+    <main class="main">
+        <section class="stats-section hide-section">
+            <section class="first-element">
+                <div class="sub-first-section">
+                    <h3>Today<a href="#" class="plus-btn">+</a>
+                    </h3>
+                    
+                    <hr>
+                    <p>Today's sales <span class="time">25-09-2023</span></p>
+                    <div class="stats st">
+                        <div class="el-1"><span>24</span><strong> clients ordered pastries</strong><a class="btn-1" href="#">+</a></div>
+                        <div class="el-1"><span>03</span><strong> clients ordered boxes of chocolate</strong><a class="btn-1" href="#">+</a></div>
+                        <div class="el-1"><span>09</span><strong> clients ordered birthday cakes</strong><a class="btn-1" href="#">+</a></div>
+                    </div>
+                </div>
+                <div class="sub-first-section">
+                    <h3>Recent Sales</h3>
+                    <hr>
+                    <p>Recent Sales made by clients</p>
+                    <div>
+                        <div class="el-2">
+                            <img src="./images/1.jpg" alt="">
+                            <strong> ordered a birthday cake <br><span class="time">25/09/2023 @11:10</span></strong>
+                            <a class="btn-1" href="#">+</a>
+                        </div>
+                        <div class="el-2">
+                            <img src="./images/2.jpg" alt="">
+                            <strong> ordered a box of chocolate <br><span class="time">25/09/2023 @09:12</span></strong>
+                            <a class="btn-1" href="#">+</a>
+                        </div>
+                        <div class="el-2">
+                            <img src="./images/3.jpg" alt="">
+                            <strong> ordered a birthday cake <br><span class="time">25/09/2023 @08:08</span></strong>
+                            <a class="btn-1" href="#">+</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="second-element">
+                <h3>Weekly Report</h3>
+                <a href="#" class="w-r-btn">Check it out</a>
+            </section>
+        </section>
+        <section class="charts-section hide-section">
+            <div class="first-part">
+                <div class="chart-1 sub-first-section">
+                    <h3>Weekly Sales</h3>
+                    <hr>
+                    <br><br><br>
+                            <canvas id="myChart"></canvas>
+                           
+                </div>
+                <div class="chart-2 sub-first-section">
+                    <h3>Sales per category</h3>
+                    <hr>
+                    <canvas id="myChart-2"></canvas>
+
+                </div>
+    
+            </div>
+        </section>
+        <section class="msg-section hide-section">
+            <div class="sub-first-section">
+                <h1><i class="fa-regular fa-comment-dots"></i>Messages</h1> 
+                <hr>
+                <p>List of people who left a message</p>
+                <br>
+                <div class="el-3">
+                    <img src="./images/1.jpg" alt="">
+                    <a href="#" class="btn-2">Consult</a>
+                    <h4><i class="fa-regular fa-comment-dots"></i>Message
+                    <span class="time">24/09/2023</span></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores minima commodi voluptates quas quaerat similique atque natus voluptatem ab tempore, cumque placeat dolor blanditiis?.........</p>
+                </div>
+                <div class="el-3">
+                    <img src="./images/2.jpg" alt="">
+                    <a href="#" class="btn-2">Consult</a>
+                    <h4><i class="fa-regular fa-comment-dots"></i>Message
+                    <span class="time">12/08/2023</span></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores minima commodi voluptates quas quaerat similique atque natus voluptatem ab tempore, cumque placeat dolor blanditiis?.........</p>
+
+                </div>
+                <div class="el-3">
+                    <img src="./images/3.jpg" alt="">
+                    <a href="#" class="btn-2">Consult</a>
+                    <h4><i class="fa-regular fa-comment-dots"></i>Message
+                    <span class="time">11/08/2023</span></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores minima commodi voluptates quas quaerat similique atque natus voluptatem ab tempore, cumque placeat dolor blanditiis?.........</p>
+
+                </div>
+                <div class="el-3">
+                    <img src="./images/5.jpg" alt="">  
+                    <a href="#" class="btn-2">Consult</a>
+                    <h4><i class="fa-regular fa-comment-dots"></i>Message
+                    <span class="time">12/07/2023</span></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores minima commodi voluptates quas quaerat similique atque natus voluptatem ab tempore, cumque placeat dolor blanditiis?.........</p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" 
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+</body>
+</html>
