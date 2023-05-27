@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition:.1s linear;
+    box-sizing: border-box;
+    color:#333;
+    text-decoration: none;
+}
+:root{
+    --pale-color:#E2DEDD;
+    --siena-color: #780000;
+    --white-color:#fff;
+    --green-color:#4F6D7A;
+    --lightgreen-color:#C0D6DF;
+    --blue-color:#22223B;
+    --gray-color:#9398B8;
+    --box-shadow: 0 0 5rem 0.1rem rgba(0,0,0,0.1);
+    --box-shadow-2: 5px 0px 0px var(--gray-color);
+}
+
+html{
+    /*font-size: 62.5%;*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 60px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:var(--white-color);
+    box-shadow: var(--box-shadow);
+}
+.header .logo{
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px;
+}
+.header .logo i{
+    color: var(--siena-color);
+    font-size: 39px;
+}
+.header .navbar a{
+    margin:auto 10px;
+    padding: 10px;
+}
+.header .navbar a:hover{
+    color:var(--lightgreen-color);
+    border-radius:20px;
+    background-color: var(--green-color);
+}
+.header .icon-user img{
+    border-radius:30%;
+}
+.user-sub-nav{
+    background-color:var(--white-color);
+    padding: 30px;
+    position: absolute;
+    right: 10%;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    display: none;
+}
+.user-sub-nav a{
+    display: block;
+    margin-bottom: 10px;
+}
+.user-sub-nav a:hover{
+    color:var(--gray-color);
+}
+.header .icon-user a:hover ~.user-sub-nav,.user-sub-nav:hover{
+    display:block;
+}
+.vertical-navbar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:30%;
+}
+.vertical-navbar a{
+    margin:15px;
+    z-index:5;
+}
+.vertical-navbar a i{
+    font-size: 18px;
+    background: var(--blue-color);
+    box-shadow:var(--box-shadow-2);
+    width:50px;
+    height:50px;
+    border-radius:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--lightgreen-color);
+    z-index:5;
+}
+.vertical-navbar a i:hover{
+    color:var(--white-color);
+    font-size: 23px;
+}
+.desc-nav-el{
+    background-color:var(--gray-color);
+    padding:14px;
+    border-radius:40px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    position:relative;
+    margin-top:-50px;
+    margin-left: 40px;
+    color:var(--white-color);
+    display: none;
+}
+
+.vertical-navbar a i:hover ~.desc-nav-el{
+    display: block;
+}
+.stats-section{
+    width:80vw;
+    margin:auto;
+    margin-top:15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50vw,1fr));
+    grid-gap:13px;
+}
+.first-element{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+grid-gap:13px;
+
+}
+
+.sub-first-section{
+    border-radius: 20px;
+    padding:10%;
+    padding-top: 4%;
+    border:1px solid var(--pale-color);
+    box-shadow: var(--box-shadow);
+    background-color: var(--white-color);
+}
+.sub-first-section span{
+    color:var(--siena-color);
+    font-size:20px;
+    font-weight: bolder;
+    margin-right: 20px;
+}
+.sub-first-section div{
+    font-size: 15px;
+    color:#333;
+    border-radius: 20px;
+    padding:10px;
+    margin:10px auto;
+    font-weight: 200;
+    font-size: 14px;
+}
+.sub-first-section h3{
+    color:var(--blue-color);
+}
+.el-1, .el-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.el-1{
+    border:1px solid gray;
+    box-shadow: var(--box-shadow-2);
+}
+
+.btn-1{
+    background-color:var(--blue-color);
+    padding:5px 15px;
+    text-align: center;
+    border-radius: 20px;
+    color:var(--white-color);
+    box-shadow: var(--box-shadow-2);
+    margin-left: 20px;
+}
+.btn-1:hover{
+background-color:var(--siena-color);
+font-weight:800;
+}
+.el-2 img, .icon-user img,.el-3 img{
+    border:1px dashed var(--blue-color);
+}
+ .el-2 img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.el-2{
+    background-color:var(--lightgreen-color);
+    box-shadow: var(--box-shadow-2);
+}
+.second-element{
+    background:url('../images/4.jpg');
+    background-size: cover;
+    height:20vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.second-element h3{
+    color:var(--white-color);
+    font-weight: 300;
+    font-size:35px;
+}
+.w-r-btn{
+    background-color: var(--white-color);
+    color: var(--blue-color);
+    padding:5px 15px;
+    font-size: 25px;
+    border-radius: 20px;
+    box-shadow:var(--box-shadow-2);
+}
+.time{
+    font-size:13px!important;
+    font-style: italic!important;
+    color:var(--green-color)!important;
+    border-bottom: 1px dashed var(--green-color);
+}
+
+hr{
+    border:.2px dashed var(--gray-color);
+}
+@media (max-width:930px){
+    .navbar{
+        display: none;
+    }
+}
+.charts-section{
+    display:grid;
+    width:80vw;
+    grid-template-columns: repeat(auto-fill,minmax(50vw,1fr));
+    grid-gap:13px;
+    min-height:95vh;
+    display: none;
+    margin:auto;
+    margin-top:15px;
+}
+.first-part{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-gap:13px;
+}
+
+
+.chart-3{
+    background-color:blue;
+}
+.stats-section, .charts-section, .msg-section{
+    animation-name: example;
+    animation-duration: 4s;  
+}
+@keyframes example {
+    0%   {margin-top:200px;}
+    25%  {margin-top:10px;}
+    50%  {margin-top:10;}
+    75%  {margin-top:10;}
+    100% { margin-top:10px;}
+    }
+.msg-section{
+    width:80%;
+    margin:auto;
+    margin-top:10px;
+    display: none;
+}
+.el-3{
+    background-color:#f5f2f1;
+}
+.el-3 img{
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+}
+.el-3 .el-1{
+    background-color: var(--white-color);
+}
+.btn-2{
+    background-color: var(--siena-color);
+    float:right;
+    padding: 5px;
+    margin-bottom: 15px;
+    color:var(--white-color);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-2);
+}
+#myChart{
+}
